@@ -1,0 +1,12 @@
+[user]
+	email = mathieu.leonardon@gmail.com
+	name = Mathieu Léonardon
+	signingkey = 12C1FAAFAB8F40F7
+[push]
+	default = simple
+[core]
+	editor = emacs -nw
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2

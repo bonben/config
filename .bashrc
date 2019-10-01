@@ -122,7 +122,8 @@ export PATH=/usr/local/stow/llvm-5.0/bin:$PATH
 
 # clion 
 export PATH=/opt/clion-2018.1/bin:$PATH
-source /etc/profile.d/undistract-me.sh
+
+#source /etc/profile.d/undistract-me.sh
 
 # variables for osed
 export VISUAL="/usr/bin/subl"
@@ -135,8 +136,8 @@ eval "$(register-python-argcomplete polar_tce_tools.py)"
 export PATH=/opt/platform-tools:$PATH
 
 # intel tools
-export PATH=$PATH:/opt/intel/bin
-source iccvars.sh -arch intel64 -platform linux
+#export PATH=$PATH:/opt/intel/bin
+#source iccvars.sh -arch intel64 -platform linux
 
 # intel python
 # source /opt/intel/intelpython3/bin/activate root
@@ -150,10 +151,12 @@ export PATH=$PATH:~/go/bin
 
 # cuda 
 export PATH=$PATH:/usr/local/cuda-10.1/bin
-alias config='/usr/bin/git --git-dir=/home/bonben/.cfg/ --work-tree=/home/bonben'
 
 # uhd
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+# config on git
+alias config='/usr/bin/git --git-dir=/home/$USER/.cfg/ --work-tree=/home/$USER'
 
 # tmux on ssh
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then

@@ -151,3 +151,12 @@ export PATH=$PATH:~/go/bin
 # cuda 
 export PATH=$PATH:/usr/local/cuda-10.1/bin
 alias config='/usr/bin/git --git-dir=/home/bonben/.cfg/ --work-tree=/home/bonben'
+
+# uhd
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+# tmux on ssh
+if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
+
